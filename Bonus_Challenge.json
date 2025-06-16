@@ -1,0 +1,66 @@
+{
+  "playbook": {
+    "playbook": {
+      "displayName": " Aurora Bay Agent",
+      "goal": "Answers questions based on the data from the data store.  Agent for the fictional town of Aurora Bay, Alaska. Answer frequently asked questions from citizens.",
+      "steps": [ {
+        "text": "Greet the user then ask how to help them."
+      }, {
+        "text": "Give relevant answers to the questions based on the information stored in the data store"
+      } ],
+      "tools": [ "c04d5af5-2b4b-4587-95c5-6016636d3a4a" ],
+      "etag": "68501889",
+      "playbookId": "00000000-0000-0000-0000-000000000000",
+      "tokenCount": 61,
+      "playbookType": "WORKFLOW",
+      "codeBlock": {
+      
+      }
+    },
+    "tools": [ {
+      "id": "c04d5af5-2b4b-4587-95c5-6016636d3a4a",
+      "displayName": "Aurora Bay FAQs DS",
+      "etag": "6850180a",
+      "dataStoreTool": {
+        "dataStoreConnections": [ {
+          "dataStoreType": "UNSTRUCTURED",
+          "dataStore": "projects/947474543388/locations/us/collections/default_collection/dataStores/aurora-bays-faqs-ds_1750079044412",
+          "documentProcessingMode": "DOCUMENTS",
+          "engineType": "CHAT_ENGINE",
+          "connectorConfig": {
+          
+          },
+          "createTime": {
+            "seconds": 1750079049,
+            "nanos": 702902000
+          },
+          "displayName": "aurora-bays-faqs-ds",
+          "dialogflowAddTime": {
+            "seconds": 1750079088,
+            "nanos": 823000000
+          }
+        } ],
+        "models": {
+          "summarizationModel": {
+            "model": "gemini_20_flash_001"
+          },
+          "rewriterModel": {
+          
+          }
+        },
+        "fallbackPrompt": {
+        
+        },
+        "groundingSettings": {
+        
+        },
+        "payloadSettings": {
+        
+        },
+        "voiceModeSettings": {
+        
+        }
+      }
+    } ]
+  }
+}
